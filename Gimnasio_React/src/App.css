@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 1rem 0;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.2rem;
+}
+
+header nav ul {
+  display: flex;
+  align-content: space-between;
+}
+
+header h2 {
+  font-size: medium;
+  margin-top: 1rem;
+}
+
+header a:hover {
+  background-color: goldenrod;
+  border: 1px solid goldenrod;
+  color: black;
+}
+
+header a {
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+  margin: 0.5rem;
+  text-decoration: none;
+  padding: 2px 5px;
+  font-weight: bold;
+}
+
+/* MAIN */
+main {
+  flex-grow: 1;
+}
+
+main fieldset {
+  border: none;
+}
+
+#category {
+  border-radius: 8px;
+}
+
+.category-filter {
+  margin: 0.5rem 0;
+  color: #24213c;
+  border-radius: 8px;
+}
+
+main section.category-filter select {
+  width: 10%;
+  padding: 0.3rem;
+}
+
+main a button {
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+  margin: 0.5rem;
+  text-decoration: none;
+  padding: 2px 5px;
+  font-weight: bold;
+}
+
+main a button:hover {
+  background-color: goldenrod;
+  border: 1px solid goldenrod;
+  color: black;
+}
+
+/* IMG */
+main section figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-description img {
+  /* width: 100%;
+  height: 200px; */
+  max-width: 100%;
+  min-height: fit-content;
+  object-fit: cover;
+}
+
+/* EJERCICIOS */
+main section.exercises {
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0 1rem;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+main section.exercise {
+  max-width: 85%;
+  margin: 0 auto;
+  height: calc(100vh - 80px);
+}
+
+main section.exercise article {
+  background-color: white;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+main section.exercises article {
+  background-color: white;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 26rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main section.exercises article h2,
+main section.exercise article h2 {
+  display: block;
+  font-size: 1.2em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+main section.exercises article h2 a,
+main section.exercise article h2 a {
+  color: #24213c;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+main section.exercises article h2 a:hover,
+main section.exercise article h2 a:hover {
+  color: #250ed5;
+}
+main section.exercises article p.category,
+main section.exercise article p.category {
+  color: #fff;
+  background-color: black;
+  text-decoration-color: white;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 2px 4px;
+  margin-bottom: 1rem;
+}
+main section.exercises article section.img-description,
+main section.exercise article section.img-description {
+  margin-bottom: 2.5rem;
+}
+
+main section.exercise article p.description {
+  flex-grow: 1;
+  color: black;
+  text-align: justify;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+main section.exercises p.description {
+  display: none;
+}
+
+main section.exercises article p.likes,
+main section.exercise article p.likes {
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+  color: maroon;
+}
+
+main section.exercises article .section-buttons,
+main section.exercise article .section-buttons {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+main section.exercises article .section-buttons ul,
+main section.exercise article .section-buttons ul {
+  display: flex;
+  justify-content: right;
+}
+
+main section.exercises article .section-buttons ul a,
+main section.exercise article .section-buttons ul a {
+  display: block;
+  width: 3rem;
+  height: 4rem;
+}
+
+main section.exercises article .edit-button,
+main section.exercise article .edit-button {
+  background-image: url("/public/edit-button.png");
+}
+main section.exercises article .delete-button,
+main section.exercise article .delete-button {
+  background-image: url("/public/delete-button.png");
+}
+main section.exercises article .like-button,
+main section.exercise article .like-button {
+  background-image: url("/public/empty-flame.png");
+}
+main section.exercises article .nolike-button,
+main section.exercise article .nolike-button {
+  background-image: url("/public/flame.png");
+}
+
+/* USERS*/
+main section.users,
+main section.user {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+main section.users .delete-button {
+  display: inline-block;
+  font-size: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+  background-image: url("/public/delete-button.png");
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 15px;
+  margin: 0.5rem;
+  text-decoration: none;
+  padding: 2.6px;
+}
+
+main section.user .edit-button {
+  display: inline-block;
+  font-size: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 2.6px;
+  margin: 0.5;
+  background-image: url("/public/edit-button.png");
+}
+
+main section.user .edit-button:hover,
+main section.users .delete-button:hover {
+  background-color: goldenrod;
+  border: 1px solid goldenrod;
+  color: black;
+  font-weight: bold;
+}
+
+main section.exercises .delete-button,
+main section.exercise .delete-button {
+  display: inline-block;
+  font-size: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+  background-image: url("/public/delete-button.png");
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 15px;
+  margin: 0.5rem;
+  text-decoration: none;
+  padding: 2.6px;
+}
+
+main section.exercise .edit-button,
+main section.exercises .edit-button {
+  display: inline-block;
+  font-size: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 2.6px;
+  margin: 0.5;
+  background-image: url("/public/edit-button.png");
+}
+
+main section.exercises .delete-button:hover,
+main section.exercise .delete-button:hover,
+main section.exercise .edit-button:hover,
+main section.exercises .edit-button:hover {
+  background-color: goldenrod;
+  border: 2px solid black;
+  color: black;
+  font-weight: bold;
+  border-radius: 15px;
+  margin: 0.5rem;
+  text-decoration: none;
+  padding: 2.6px;
+}
+
+main section.exercise .nolike-button,
+main section.exercises .nolike-button {
+  display: inline-block;
+  font-size: 0;
+  height: 2rem;
+  width: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 2px solid black;
+  border: transparent;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 2.6px;
+  margin: 0.5;
+  background-image: url("/public/flame.png");
+}
+
+main section.exercise .like-button,
+main section.exercises .like-button {
+  display: inline-block;
+  font-size: 0;
+  height: 2rem;
+  width: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 2px solid black;
+  border: transparent;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 2.6px;
+  margin: 0.5;
+  background-image: url("/public/empty-flame.png");
+}
+
+/* FORMULARIO */
+form h1 {
+  margin-left: 1rem;
+}
+
+section > h1 {
+  margin: 1rem;
+}
+
+form fieldset {
+  border: none;
+  margin: 1rem;
+}
+form fieldset label {
+  font-size: 1em;
+}
+
+form ul li {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+form ul li img {
+  margin-top: 0.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 0.3rem;
+  border: none;
+}
+form select {
+  width: 100%;
+  padding: 0.3rem;
+}
+
+form button {
+  color: white;
+  font-size: 1.2em;
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 8px;
+  margin: 0 0.5rem 1rem 0.5rem;
+  text-decoration: none;
+  padding: 4px;
+  font-weight: bold;
+}
+
+form > button:hover {
+  background-color: goldenrod;
+  border: 1px solid goldenrod;
+  color: black;
+  border-radius: 8px;
+  margin: 0 0.5rem 1rem 0.5rem;
+  text-decoration: none;
+  padding: 4px;
+}
+/* FOOTER */
+footer {
+  height: 2rem;
+  position: sticky;
+  bottom: 0rem;
+  background-size: cover;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES Y RESPONSIVENESS */
+
+@media (max-width: 800px) {
+  .foto-portada {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  /* .img-description img {
+    max-width: 80%;
+  }
+  main section.exercise article {
+    width: 75%;
+    height: 75%;
+    margin: 0 auto;
+  } */
+  .foto-portada {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .foto-portada img {
+    width: 100%;
+  }
+}
+
+/* @media (min-width: 900px) {
+  .img-description img {
+    max-width: 60%;
+  }
+  main section.exercise article {
+    width: 75%;
+    height: 75%;
+    margin: 0 auto;
+  }
+}
+ */
